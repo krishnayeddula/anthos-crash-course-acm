@@ -23,6 +23,8 @@ fi
 DEMO_PROJECT_ID=$1
 DEMO_ZONE=$2
 
+# TODO: Enable services
+
 for CLUSTER_NAME in ${CLUSTERS[@]}; do
   echo "Creating Cluster: $CLUSTER_NAME"
   gcloud beta container clusters create $CLUSTER_NAME --zone $DEMO_ZONE --project $DEMO_PROJECT_ID \
@@ -33,7 +35,7 @@ for CLUSTER_NAME in ${CLUSTERS[@]}; do
   gcloud container hub memberships register $CLUSTER_NAME --project $DEMO_PROJECT_ID \
     --gke-cluster $DEMO_ZONE/$CLUSTER_NAME --enable-workload-identity
   
-  #echo "Enabling ACM: $CLUSTER_NAME"
-  #gcloud beta container hub config-management apply --project $PROJECT_ID \
-  #  --membership $CLUSTER_NAME --config apply-spec.yaml
+  echo "Enabling ACM: $CLUSTER_NAME"
+  gcloud beta container hub config-management apply --project $PROJECT_ID \
+    --membership $CLUSTER_NAME --config apply-spec.yaml
 done

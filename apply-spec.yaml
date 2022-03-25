@@ -4,7 +4,7 @@ spec:
   configSync:
     enabled: true
     sourceFormat: unstructured
-    syncRepo: git://github.com/sadasystems/anthos-crash-course-acm.git
+    syncRepo: https://github.com/sadasystems/anthos-crash-course-acm.git
     syncBranch: main
     secretType: none
     policyDir: config-sync-root
