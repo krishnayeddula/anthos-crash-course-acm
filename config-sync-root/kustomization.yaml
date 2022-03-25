@@ -1,0 +1,4 @@
+resources:
+- cluster-registry
+- platform
+- policy

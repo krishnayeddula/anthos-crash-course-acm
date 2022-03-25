@@ -1,0 +1,23 @@
+applySpecVersion: 1
+spec:
+  # Configure Config Sync settings
+  configSync:
+    enabled: true
+    sourceFormat: unstructured
+    syncRepo: git://github.com/sadasystems/anthos-crash-course-acm.git
+    syncBranch: main
+    secretType: none
+    policyDir: config-sync-root
+  # Configure Policy Controller Settings
+  policyController:
+    enabled: true
+    templateLibraryInstalled: true
+    referentialRulesEnabled: true
+    logDeniesEnabled: true
+    # Uncomment to adjust the audit interval, set to 0 to disable audit
+    # auditIntervalSeconds: 0
+    # Uncomment to exempt namespaces
+    # exemptableNamespaces: ["namespace-name"]
+    # Uncomment to enable mutation (requires use of `gcloud beta container hub config-management apply`)
+    # mutationEnabled: true
+

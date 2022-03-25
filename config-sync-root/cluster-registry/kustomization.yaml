@@ -1,0 +1,8 @@
+resources:
+- cluster-acm-demo-dev.yaml
+- cluster-acm-demo-stage.yaml
+- cluster-acm-demo-prod.yaml
+- selector-environment-dev.yaml
+- selector-environment-stage.yaml
+- selector-environment-prod.yaml
+- selector-platform-gcp.yaml
