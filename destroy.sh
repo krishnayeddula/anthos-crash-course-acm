@@ -28,5 +28,5 @@ for CLUSTER_NAME in ${CLUSTERS[@]}; do
   gcloud beta container clusters delete $CLUSTER_NAME --zone $DEMO_ZONE --project $DEMO_PROJECT_ID --quiet
   
   echo "Unregistering Cluster: $CLUSTER_NAME"
-  gcloud container hub memberships unregister $CLUSTER_NAME --project $DEMO_PROJECT_ID
+  gcloud container hub memberships delete $CLUSTER_NAME --project $DEMO_PROJECT_ID --quiet
 done
