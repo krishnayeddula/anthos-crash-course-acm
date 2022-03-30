@@ -23,7 +23,14 @@ fi
 DEMO_PROJECT_ID=$1
 DEMO_ZONE=$2
 
-# TODO: Enable services
+echo "Enabling Services"
+gcloud services enable --project $DEMO_PROJECT_ID \
+  container.googleapis.com \
+  anthos.googleapis.com \
+  krmapihosting.googleapis.com \
+  cloudresourcemanager.googleapis.com
+
+gcloud beta container hub config-management enable --project $DEMO_PROJECT_ID
 
 for CLUSTER_NAME in ${CLUSTERS[@]}; do
   echo "Creating Cluster: $CLUSTER_NAME"
