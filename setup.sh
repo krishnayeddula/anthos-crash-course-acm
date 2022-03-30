@@ -43,6 +43,6 @@ for CLUSTER_NAME in ${CLUSTERS[@]}; do
     --gke-cluster $DEMO_ZONE/$CLUSTER_NAME --enable-workload-identity
   
   echo "Enabling ACM: $CLUSTER_NAME"
-  gcloud beta container hub config-management apply --project $PROJECT_ID \
+  gcloud beta container hub config-management apply --project $DEMO_PROJECT_ID \
     --membership $CLUSTER_NAME --config apply-spec.yaml
 done
