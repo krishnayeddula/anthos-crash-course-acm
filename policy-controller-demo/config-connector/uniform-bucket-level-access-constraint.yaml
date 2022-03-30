@@ -1,0 +1,9 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: StorageBucketUniform
+metadata:
+  name: storage-bucket-uniform-access
+spec:
+  match:
+    kinds:
+      - apiGroups: ["storage.cnrm.cloud.google.com"]
+        kinds: ["StorageBucket"]
