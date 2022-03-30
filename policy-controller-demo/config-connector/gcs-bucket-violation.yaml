@@ -4,5 +4,5 @@ metadata:
   name: gcs-bucket-violation
   namespace: default
 spec:
-  location: us-east1-b 
+  location: us-east1
   uniformBucketLevelAccess: false

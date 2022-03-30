@@ -4,5 +4,5 @@ metadata:
   name: gcs-bucket-success
   namespace: default
 spec:
-  location: us-east1-b 
+  location: us-east1
   uniformBucketLevelAccess: true
