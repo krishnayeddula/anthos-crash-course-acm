@@ -1,0 +1,8 @@
+apiVersion: storage.cnrm.cloud.google.com/v1beta1
+kind: StorageBucket
+metadata:
+  name: gcs-bucket-violation
+  namespace: default
+spec:
+  location: us-east1
+  uniformBucketLevelAccess: false
