@@ -1,0 +1,27 @@
+namespace: prototype-project
+
+commonLabels:
+  owner: team2
+  configmanagement.gke.io/cluster-selector: selector-environment-dev
+
+resources:
+  - ../base-template
+
+patches:
+  - target:
+      kind: RoleBinding
+      name: developer-access
+    patch: |-
+      - op: replace
+        path: /subjects/0/name
+        value: team1-developers@example.com
+      - op: replace
+        path: /roleRef/name
+        value: admin
+  - target:
+      kind: Namespace
+      name: default-name
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: prototype-project

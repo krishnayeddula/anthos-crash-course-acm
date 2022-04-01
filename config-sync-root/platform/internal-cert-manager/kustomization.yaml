@@ -3,7 +3,6 @@ resources:
 
 commonLabels:
   owner: platform-admins
-  app: cert-manager
 
 helmCharts:
 - name: cert-manager
