@@ -1,5 +1,5 @@
 resources:
 - cluster-registry
-- namespace
+- namespaces
 - platform
 - policy
