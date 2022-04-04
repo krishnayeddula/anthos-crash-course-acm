@@ -2,6 +2,8 @@ namespace: prototype-project
 
 commonLabels:
   owner: team2
+
+commonAnnotations:
   configmanagement.gke.io/cluster-selector: selector-environment-dev
 
 resources:
