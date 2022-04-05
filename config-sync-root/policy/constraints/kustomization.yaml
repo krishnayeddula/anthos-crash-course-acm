@@ -1,0 +1,2 @@
+resources:
+- privileged-container-constraint.yaml
